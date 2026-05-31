@@ -17,16 +17,14 @@ test:
 build:
   stage: build
   script:
-    - echo "Building application..."
+    - echo Building application
 
 deploy:
   stage: deploy
   script:
-    - echo "Deploying version $VERSION..."
+    - echo Deploying version $VERSION
 
 notify:
   stage: notify
-  needs:
-    - deploy
   script:
-    - echo "Deployment successful! Version: $VERSION"
+    - echo Deployment successful! Version: $VERSION
